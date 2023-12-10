@@ -1,0 +1,94 @@
+/* NavigationBar.css */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff; /* Clean white background */
+  border-bottom: 2px solid #f2f2f2; /* Subtle border for a refined edge */
+  padding: 1rem 2rem;
+  position: sticky;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Apply a shadow on the nav bar when scrolled */
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a, nav ul li button {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600; /* Slightly bolder font for modern feel */
+  padding: 0.5rem 0;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+  color: #1a8cff; /* Bright but not overpowering blue */
+}
+
+nav ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the logo or brand name differently for emphasis */
+nav ul li.logo a {
+  font-weight: 700; /* Even bolder for the brand name */
+  color: #1a8cff; /* Brand color */
+  font-size: 1.25rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  nav ul li a, nav ul li button {
+    width: 100%;
+    padding: 0.75rem 0; /* Larger tap area for mobile devices */
+  }
+}
+nav {
+  background: #667eea; /* Gradient background */
+  background: -webkit-linear-gradient(to right, #667eea, #c0c0c0); /* For Safari 5.1-6 */
+  background: -o-linear-gradient(to right, #667eea, #c0c0c0); /* For Opera 11.1-12 */
+  background: -moz-linear-gradient(to right, #667eea, #c0c0c0); /* For Firefox 3.6-15 */
+  background: linear-gradient(to right, #667eea, #c0c0c0); /* Standard syntax */
+  border-bottom: 2px solid #f2f2f2;
+  padding: 1rem 2rem;
+}
+
+nav ul li a, nav ul li button {
+  color: #fff; /* White text */
+}
+
+nav ul li a:hover, nav ul li button:hover {
+  color: #333; /* Dark gray hover color */
+}
