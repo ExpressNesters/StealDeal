@@ -1,14 +1,13 @@
-package edu.sjsu.stealdeal.ups;
+package edu.sjsu.stealdeal.wss;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserProductServiceApplication {
+public class WssApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserProductServiceApplication.class, args);
+		SpringApplication.run(WssApplication.class, args);
 	}
 
 }
-	

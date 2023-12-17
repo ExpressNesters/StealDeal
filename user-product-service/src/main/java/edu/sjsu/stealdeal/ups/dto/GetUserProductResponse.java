@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CreateUserProductRequest {
+public class GetUserProductResponse {
+	
+	private ProductDTO productDTO;
 
-    private long userId;
-    private String URL;
-    private String storeName;
 }

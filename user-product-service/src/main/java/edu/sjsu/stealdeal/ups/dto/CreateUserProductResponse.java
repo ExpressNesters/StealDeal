@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserProductDTO {
+public class CreateUserProductResponse {
+	
+	private long userProductId;
+	private String message;
 
-    private String userProductId;
-    private String name;
-    private String description;
 }

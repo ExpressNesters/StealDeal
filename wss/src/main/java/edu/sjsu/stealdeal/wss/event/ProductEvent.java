@@ -1,4 +1,4 @@
-package edu.sjsu.stealdeal.ups.dto;
+package edu.sjsu.stealdeal.wss.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CreateUserProductRequest {
+public class ProductEvent {
+	
+	private String productURL;
+	private String storeName;
+	private long productId;
 
-    private long userId;
-    private String URL;
-    private String storeName;
 }

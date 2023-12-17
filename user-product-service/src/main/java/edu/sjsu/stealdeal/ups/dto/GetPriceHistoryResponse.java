@@ -1,17 +1,18 @@
 package edu.sjsu.stealdeal.ups.dto;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserProductResponse {
+public class GetPriceHistoryResponse {
 
-    private UserProductDTO userProducts;
+    private long productId;
+    private List<PriceDTO> priceHistory;
 }

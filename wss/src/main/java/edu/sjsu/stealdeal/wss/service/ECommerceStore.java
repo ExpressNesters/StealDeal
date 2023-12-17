@@ -1,17 +1,17 @@
-package edu.sjsu.stealdeal.ups.dto;
+package edu.sjsu.stealdeal.wss.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PriceHistoryResponse {
-
-    List<PriceDTO> priceHistory;
+public class ECommerceStore {
+	
+	private String name;
+	private SitemapDescription sitemapDescription;
+	
 }

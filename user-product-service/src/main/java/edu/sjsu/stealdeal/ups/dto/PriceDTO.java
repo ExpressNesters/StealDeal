@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class PriceDTO {
+
     private double price;
     private LocalDateTime priceRecordTime;
 }
