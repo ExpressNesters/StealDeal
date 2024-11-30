@@ -3,9 +3,10 @@ kind: ConfigMap
 metadata:
   name: ups-app-configmap
 data:
-  postgres_host: "expressnestpostgresdb-w2.clkrwn5zmdv7.us-west-2.rds.amazonaws.com"
+  postgres_host: "steal-deal.czuusgsqcjp4.us-west-1.rds.amazonaws.com"
   postgres_port: "5432"
-  kafka_server: "pkc-rgm37.us-west-2.aws.confluent.cloud:9092"
+  postgres_db: "upsdb"
+  kafka_server: "pkc-921jm.us-east-2.aws.confluent.cloud:9092"
   product_event: "product-events"
   price_event: "price-events"
   notification_event: "notification-events"

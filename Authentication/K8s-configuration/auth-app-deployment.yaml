@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: auth-app-container
-          image: neeharikasingh/auth-app:0.2
+          image: neeharikasingh/auth-app:0.5
           ports:
             - containerPort: 8098
           env:

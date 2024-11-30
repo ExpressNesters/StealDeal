@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder=true)
 @Entity
-@Table(name = "scraped-products")
+@Table(name = "scraped_products")
 public class ScrapedProduct {
 
 	@Id

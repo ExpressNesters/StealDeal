@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: wss-app-container
-          image: neeharikasingh/wss-app:0.3
+          image: neeharikasingh/wss-app:0.5
           ports:
             - containerPort: 8090
           env:
@@ -30,6 +30,11 @@ spec:
                 configMapKeyRef:
                   name: wss-app-configmap
                   key: postgres_port
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: wss-app-configmap
+                  key: postgres_db
             - name: POSTGRES_USERNAME
               valueFrom:
                 secretKeyRef:

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: upm-app-container
-          image: neeharikasingh/upm-app:0.4
+          image: neeharikasingh/upm-app:0.5
           ports:
             - containerPort: 8088
           env:

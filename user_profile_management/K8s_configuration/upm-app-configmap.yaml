@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: upm-app-configmap
 data:
-  db_host: "expressnestpostgresdb-w2.clkrwn5zmdv7.us-west-2.rds.amazonaws.com"
+  db_host: "steal-deal.czuusgsqcjp4.us-west-1.rds.amazonaws.com"
   db_port: "5432"
-  db_name: "userprofiledb"
+  db_name: "upmdb"

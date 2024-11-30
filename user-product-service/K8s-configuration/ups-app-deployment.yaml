@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ups-app-container
-          image: neeharikasingh/ups-app:0.4
+          image: neeharikasingh/ups-app:0.6
           ports:
             - containerPort: 8082
           env:
@@ -30,6 +30,11 @@ spec:
                 configMapKeyRef:
                   name: ups-app-configmap
                   key: postgres_port
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: ups-app-configmap
+                  key: postgres_db
             - name: POSTGRES_USERNAME
               valueFrom:
                 secretKeyRef:
