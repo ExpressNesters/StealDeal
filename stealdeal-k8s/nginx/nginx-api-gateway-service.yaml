@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: nginx-api-gateway
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: nginx-api-gateway
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
+      nodePort: 30080  # Added to bind a specific NodePort
