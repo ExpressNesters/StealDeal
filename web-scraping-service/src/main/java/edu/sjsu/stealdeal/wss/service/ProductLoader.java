@@ -1,6 +1,7 @@
 package edu.sjsu.stealdeal.wss.service;
 
 import java.net.URI;
+import java.util.Arrays;
 
 import org.apache.commons.text.StringEscapeUtils;
 import org.jsoup.nodes.Document;
@@ -67,7 +68,11 @@ public class ProductLoader {
 		}
 		
 		try {
-			String price = origPriceData.split(" ")[0];	
+            String [] data = origPriceData.split(" ");// to cater to values like Now $18
+			String price = Arrays.stream(data)
+                .filter(p -> p.charAt(0) == '$')
+                .findFirst()
+                .orElse(data[0]);	
 			
 			
 			if (price.charAt(0) == '$') {
