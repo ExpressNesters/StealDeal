@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: wss-app-container
-          image: neeharikasingh/wss-app:0.6
+          image: neeharikasingh/wss-app:0.7
           ports:
             - containerPort: 8090
           env:
