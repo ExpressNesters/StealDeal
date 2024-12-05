@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -106,6 +107,15 @@ public class WebScrapingService {
 		          }
 
 		        });
+        
+        Random random = new Random();
+        scrapedProductRepository.findAll()
+                .stream()
+                .forEach(
+                    scrapedProduct -> scheduleProductScraping(
+                        scrapedProduct.getStoreName(), scrapedProduct.getScrapedProductId(), random.nextInt(30 * 60));
+                );
+            
 	}
 	
 	
@@ -117,7 +127,7 @@ public class WebScrapingService {
 				.build();
 		ScrapedProduct createdScrapedProduct =  scrapedProductRepository.save(scrapedProduct);
 		scrapeProduct(store, createdScrapedProduct);
-		
+        scheduleProductScraping(store, createdScrapedProduct.getScrapedProductId(), RELOAD_INTERVAL_SECONDS);
 	}
 	
 	public void scheduleProductScraping(ECommerceStore store, long scrapedProductId, long delaySeconds) {
@@ -158,7 +168,7 @@ public class WebScrapingService {
 			newlyScrapedProduct = scrapedProductRepository.save(newlyScrapedProduct);
 			sendScrapedProductEvent(newlyScrapedProduct);
 		}
-	}
+    }
 	
 	private void sendScrapedProductEvent(ScrapedProduct newlyScrapedProduct) {
 		ScrapedProductEvent event = ScrapedProductEvent.builder()
